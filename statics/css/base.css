@@ -1,0 +1,20 @@
+.container {
+    padding-top: 20px;
+    max-width: 500px;
+}
+
+.user-list {
+    padding: 20px 0 30px;
+}
+
+.user-list li {
+    padding: 10px 0;
+}
+
+.user-form form {
+    padding: 10px 0;
+}
+
+.submit-controls {
+    padding: 15px 0;
+}

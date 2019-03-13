@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>TypeSystem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css" integrity="sha256-Nfu23DiRqsrx/6B6vsI0T9vEVKq1M6KgO8+TV363g3s=" crossorigin="anonymous" />
+    <link href="{{ url_for('static', path='/css/base.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <main role="main" class="container">
+        <div class="user-list">
+            <h4>Current users</h4>
+            <div>
+                {% if users %}
+                <ul>
+                    {% for user in users %}<li>{{ user }}</li>{% endfor %}
+                </ul>
+                {% else %}
+                <em>None</em>
+                {% endif %}
+            </div>
+        </div>
+        <hr />
+        <div class="user-form">
+            {% if form.errors %}
+              {{ form.errors }}
+            {% endif %}
+            <h4>Add user</h4>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="form-userschema-name">
+                        name
+                    </label>
+                    <input type="text" class="form-control " id="form-userschema-name" name="name" required>
+                </div>
+                <div class="submit-controls">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+databases
+alembic
+sqlalchemy
+aiosqlite
+
+typesystem
+aiofiles
+bootstrap4
+jinja2
+python-multipart
+
+starlette
+uvicorn
