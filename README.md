@@ -23,5 +23,5 @@ alembic upgrade head
 ## Running
 
 ```
-`python app.py`
+python app.py
 ```
